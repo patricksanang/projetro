@@ -1,0 +1,5 @@
+<routes>
+    <route url="/settings/?" module="Settings" action="index"/>
+    <route url="/settings/verification/?" module="Settings" action="verification"/>
+    <route url="/sms/settings/verification/?" module="Settings" action="verification"/>
+</routes>

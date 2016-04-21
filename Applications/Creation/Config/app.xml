@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<definitions>
+	<define var="cheminDossierReception" value="C:/wamp/www/sms/Applications/Accueil/Modules/Creation/Files/"/>
+	<define var="nomFichier" value="contacts"/>
+	<define var="serveur_sql" value="localhost"/>
+	<define var="username" value="root"/>
+	<define var="nom_de_la_base" value="mydb"/>
+	<define var="mot_de_passe" value=""/>
+	<define var="usernameAPI" value=""/>
+	<define var="passwordAPI" value=""/>
+	<define var="senderAPI" value=""/>
+	<define var="ftp_server" value="localhost"/>
+	<define var="ftp_login" value="a6698046"/>
+	<define var="ftp_password" value="000webhost"/>
+	<define var="ftp_destination_file" value="/public_html/sql3.sql"/>
+	<define var="ftp_source_file" value="C:\wamp\www\sms\sql3.sql"/>
+	<define var="cheminSauvegardeTempBD" value="C:\wamp\www\sms\sql3.sql"/>
+</definitions>
