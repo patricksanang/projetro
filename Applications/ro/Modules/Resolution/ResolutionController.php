@@ -1,9 +1,8 @@
 <?php
-namespace Applications\Authentification\Modules\Authentification;
+namespace Applications\Ro\Modules\Resolution;
 use Library\BackController;
 use Library\HTTPRequest;
 use Library\HTTPResponse;
-use Library\Entities\User;
 use Library\Controls;
 use Library\Backup;
 
