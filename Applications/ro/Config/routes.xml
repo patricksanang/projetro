@@ -1,0 +1,3 @@
+<routes>
+        <route url="/authentification/login/?$" module="Authentification" action="login"/>
+</routes>

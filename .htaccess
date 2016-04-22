@@ -1,16 +1,8 @@
 RewriteEngine on
 
-RewriteBase /sms/
+RewriteBase /projetro/
 
-RewriteRule ^creation/(.*)$ index.php?app=Creation [QSA,L]
-
-RewriteRule ^test/(.*)$ index.php?app=Test [QSA,L]
-
-RewriteRule ^home/(.*)$ index.php?app=Home [QSA,L]
-
-RewriteRule ^settings/(.*)$ index.php?app=Settings [QSA,L]
-
-RewriteRule ^authentification/(.*)$ index.php?app=Authentification [QSA,L]
+RewriteRule ^((?s).*)$ index.php?_url=/$1 [QSA,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
  

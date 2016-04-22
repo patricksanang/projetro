@@ -3,10 +3,10 @@ namespace Applications\Authentification;
 
 use Library\Application;
 
-class AuthentificationApplication extends Application{
+class RoApplication extends Application{
 	public function __construct(){
 		parent::__construct();
-		$this->name = "Authentification";
+		$this->name = "Ro";
         }
 
 	public function run(){

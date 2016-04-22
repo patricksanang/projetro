@@ -31,7 +31,7 @@ class HTTPResponse extends ApplicationComponent
 
 	public function send()
 	{
-		exit($this->page->getGeneratedPage());
+                exit($this->page->getGeneratedPage());
 	}
 
 	public function setPage(Page $page){

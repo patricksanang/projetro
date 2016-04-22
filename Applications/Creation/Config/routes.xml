@@ -1,7 +1,0 @@
-<routes>
-        
-        <route url="/creation/carnet/index/?" module="Carnet" action="index"/>
-        <route url="/creation/carnet/groupe/?" module="Carnet" action="creergroupe"/>
-        <route url="/creation/carnet/contact/?" module="Carnet" action="creercontact"/>
-        <route url="/creation/carnet/upload/contacts/?" module="Carnet" action="uploadercontacts"/>
-</routes>

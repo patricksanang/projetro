@@ -1,8 +1,0 @@
-<routes>
-        <route url="/authentification/login/?$" module="Authentification" action="login"/>
-        <route url="/sms/authentification/login/?$" module="Authentification" action="login"/>
-        <route url="/authentification/verification/?$" module="Authentification" action="verification"/>
-        <route url="/sms/authentification/verification/?$" module="Authentification" action="verification"/>
-        <route url="/authentification/logout/?$" module="Authentification" action="logout"/>
-        <route url="/sms/authentification/logout/?$" module="Authentification" action="logout"/>
-</routes>
