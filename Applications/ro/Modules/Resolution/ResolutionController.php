@@ -7,10 +7,8 @@ use Library\Entities\User;
 use Library\Controls;
 use Library\Backup;
 
-class SolveController extends BackController{
+class ResolutionController extends BackController{
     public function executeSolve(HTTPRequest $http){
-    
-        $result="ca marche!";
-        json_encode($result);
+
     }
 }

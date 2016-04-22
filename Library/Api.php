@@ -104,7 +104,7 @@ function getCredit($username, $password)
 /**
  * methode permettant de lancer les curl
  */
-private function lancerCURL($url)
+public function lancerCURL($url)
 {
     // Tableau contenant les options de téléchargement
     $options=array(

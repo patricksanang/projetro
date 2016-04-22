@@ -13,7 +13,7 @@ abstract class Application
 	protected $name;
 	protected $session;
 	protected $config;
-	protected $websiteName='sms';
+	protected $websiteName='projetro';
 
 	public function __construct()
 	{
