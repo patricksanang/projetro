@@ -1,0 +1,10 @@
+On divisera le travail de cette maniere:
+
+* faire une architecture de base et donner le squelette (framework de travail) de l'application
+* expliquer comment fonctionne l'api et comment l'utiliser pour la programmation lineaire
+* expliquer l'interaction avec google map
+* expliquer les attentes en terme d'interface graphique
+* distribuer les taches a faire aux gens
+** Sonia et Mbida se concentreront sur l'interface graphique et l'interaction avec google map
+** Noyessie va fournir l'architecture de base et le squelette
+** Sanang va faire le controleur

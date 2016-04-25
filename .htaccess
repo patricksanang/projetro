@@ -1,0 +1,10 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+RewriteBase /projetro/
+
+RewriteRule ^ro/(.*)$ index.php?app=Ro [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+ 
+AddType text/css .css
