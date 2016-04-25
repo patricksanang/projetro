@@ -8,6 +8,11 @@ use Library\Backup;
 
 class ResolutionController extends BackController{
     public function executeSolve(HTTPRequest $http){
-
+    
+        //$content = file_get_contents('http://localhost/projetro/Web/Frontend/test.php');
+        //$data = json_decode($content);
+        //echo $content;
+        
+        
     }
 }

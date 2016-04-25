@@ -9,7 +9,7 @@ function autoload($class)
 {
 	try{
 		//echo "<p>Load ". str_replace('\\','/',$class).'.php' . "</p>";
-		require str_replace('\\','/',$class).'.php';
+		require_once ''.str_replace('\\','/',$class).'.php';
 	}catch(Exception $e){
 		throw new Exception($e->getMessage());
 	}

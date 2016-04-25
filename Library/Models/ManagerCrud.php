@@ -3,13 +3,6 @@ namespace Library\Models;
 use Library\Entity;
 use Library\Manager;
 use Library\Utilities;
-use Library\Entities\Contact;
-use Library\Entities\ContactHasGroupe;
-use Library\Entities\Groupe;
-use Library\Entities\Numero;
-use Library\Entities\SMS;
-use Library\Entities\SMSHasContact;
-use Library\Entities\User;
 
 /**
  * Description of Manager

@@ -26,5 +26,5 @@ $class = "Applications\\".$app."\\".$app."Application";
 
 
 $app = new $class();
- $app->run();
+$app->run();
 

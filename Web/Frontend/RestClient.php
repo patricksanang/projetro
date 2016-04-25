@@ -6,8 +6,6 @@
  * and open the template in the editor.
  */
 
-namespace Library;
-
 /**
  * Description of restClient
  *
@@ -49,7 +47,7 @@ class RestClient {
             )
         );
         //$opts=json_encode($opts);
-        var_dump($opts);
+        //var_dump($opts);
         return stream_context_create($opts);
     }
 
