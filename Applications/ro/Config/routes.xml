@@ -1,4 +1,6 @@
 <routes>
         <route url="/resolution/solve/?$" module="Resolution" action="solve"/>
         <route url="/ro/resolution/solve/?$" module="Resolution" action="solve"/>
+        <route url="/donnees/getDonnees/?$" module="Donnees" action="getDonnees"/>
+        <route url="/ro/donnees/getDonnees/?$" module="Donnees" action="getDonnees"/>
 </routes>

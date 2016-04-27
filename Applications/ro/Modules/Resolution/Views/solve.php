@@ -7,6 +7,7 @@
  */
 //echo $_GET['app'];
 $data = json_decode(file_get_contents('php://input'), true);
+//echo 'datatatat';
 //var_dump($data);
 //echo $data["content"];
 $comp = 0;
@@ -67,7 +68,7 @@ $tab['intera'] = true;
 require 'Simplexe/simplesso.php';
 
 $tabResult = explode(';', $result);
-
+//echo $result;
 //$resultFinal=json_encode($tabResult);
 $comp=0;
 $nombreLieux=0;

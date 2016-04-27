@@ -621,8 +621,8 @@ class GoogleMapAPI {
             $this->content .= "\t\t" . 'id_name = \'marker_\'+gmarkers.length;' . "\n";
             $this->content .= "\t\t" . 'content += \'<input type="text" id="\'+id_name+\'"/>\';' . "\n";
             $this->content .= "\t\t" . 'var from = ""+latlng.lat()+","+latlng.lng();' . "\n";
-            $this->content .= "\t\t" . 'content += \'<br /><input type="button" onClick="addDirection(to.value,document.getElementById(\\\'\'+id_name+\'\\\').value);" value="Arrivée"/>\';' . "\n";
-            $this->content .= "\t\t" . 'content += \'<input type="button" onClick="addDirection(document.getElementById(\\\'\'+id_name+\'\\\').value,to.value);" value="Départ"/>\';' . "\n";
+            $this->content .= "\t\t" . 'content += \'<br /><input type="button" onClick="addDirection(to.value,document.getElementById(\\\'\'+id_name+\'\\\').value);" value="Arrivï¿½e"/>\';' . "\n";
+            $this->content .= "\t\t" . 'content += \'<input type="button" onClick="addDirection(document.getElementById(\\\'\'+id_name+\'\\\').value,to.value);" value="Dï¿½part"/>\';' . "\n";
         }
 
         $this->content .= "\t\t" . 'var html = \'<div style="text-align:left;width:' . $this->infoWindowWidth . 'px;" class="infoGmaps">\'+content+\'</div>\';' . "\n";
@@ -731,7 +731,7 @@ class GoogleMapAPI {
 		$this->content .= "\t\t" . 'for (var j = 1; j < tab.length - 1; j++) {'."\n";
 		$this->content .= "\t\t" . '	var address = tab[j];'."\n";
 		$this->content .= "\t\t" . 'if (address !== "") {'."\n";
-		$this->content .= "\t\t" . 'alert(address);'."\n";
+		$this->content .= "\t\t" . ''."\n";
 	    $this->content .= "\t\t" . '_waypoints.push({'."\n";
 		$this->content .= "\t\t" . 'location: address,'."\n";
 		$this->content .= "\t\t" . 'stopover: true  //stopover is used to show marker on map for waypoints'."\n";
@@ -896,7 +896,7 @@ class GoogleMapAPI {
     }
 
     /**
-     * ajouté par Patrick SANANG
+     * ajoutï¿½ par Patrick SANANG
      * */
     function get_coordinates($city, $street, $province) {
         $address = urlencode($city . ',' . $street . ',' . $province);

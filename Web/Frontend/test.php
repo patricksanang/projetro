@@ -37,3 +37,7 @@ $pHeaders = array(
 $result=$r->setUrl('http://localhost/projetro/ro/resolution/solve/')->post($pHeaders, $body);
 
 print_r($result['content']);
+
+$result=$r->setUrl('http://localhost/projetro/ro/donnees/getDonnees/')->get($pHeaders);
+
+print_r($result['content']);
