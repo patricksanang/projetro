@@ -1,6 +1,14 @@
 <?php
 
-
+/**
+ * fonction pour recuperer la distance entre deux points
+ */
+function getDistancePoints($point1, $point2)
+{
+    require_once 'GoogleMapAPIv3.class.php';
+    $gmap = new GoogleMapAPI();
+    return $gmap->geoGetDistance($point1->latitude, $point1->longitude, $point2->latitude, $point2->longitude, 'K');
+}
 /**
  * fonction pour l'affichage simple de la carte avec les marqueurs dessus
  */
@@ -53,7 +61,7 @@ function getCarteItineraire($gmap, $sites)
  */
 function carte($etat, $id, $center, $width, $height, $zoom, $language, $sites=array())
 {
-    require('GoogleMapAPIv3.class.php');
+    require_once 'GoogleMapAPIv3.class.php';
 
 $gmap = new GoogleMapAPI();
 $gmap->setDivId($id);
@@ -72,25 +80,25 @@ $gmap->setDefaultHideMarker(false);
     {
         case 1:
             //on veut juste afficher la carte
-            $gmap->generate();
-            echo $gmap->getGoogleMap();
+            //$gmap->generate();
+            //echo $gmap->getGoogleMap();
             break;
         case 2:
             //on veut afficher la carte avec les marqueurs
-            $gmap=getCarteMarqueurs($gmap);
-            $gmap->generate();
-            echo $gmap->getGoogleMap();
+            //$gmap=getCarteMarqueurs($gmap);
+            //$gmap->generate();
+           // echo $gmap->getGoogleMap();
             break;
         case 3:
             //on veut afficher la carte avec l'itineraire
-            $gmap= getCarteItineraire($gmap, $sites);
-            $gmap->generate();
-            echo $gmap->getGoogleMap();
+            //$gmap= getCarteItineraire($gmap, $sites);
+            //$gmap->generate();
+            //echo $gmap->getGoogleMap();
             break;
         default :
             //on veut juste afficher la carte
-            $gmap->generate();
-            echo $gmap->getGoogleMap();
+            //$gmap->generate();
+            //echo $gmap->getGoogleMap();
             break;
     }
 }

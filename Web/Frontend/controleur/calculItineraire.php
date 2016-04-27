@@ -29,7 +29,7 @@ if (!$preference) {
             $tabPref[substr($key, 1, 1)][] = substr($key, 2, 1);
         }
     }
-    var_dump($tabPref);
+    //var_dump($tabPref);
     //echo 'on recupere les preferences';
 }
 
@@ -76,13 +76,56 @@ for ($j = 0; $j < count($coordtab) - 1; $j++) {
         $corp1['a'][count($coordtab)+1]['a'.(count($coordtab)+2) . ($j + 1)]=0;
     }
 }
-$corp1['a'][count($coordtab)+1]['a'.(count($coordtab)) . (count($coordtab))]=1;
+$corp1['a'][count($coordtab)+1]['a'.(count($coordtab)+2) . (count($coordtab))]=1;
 
 //etablissement des equations des preferences
 
 /*
  * partie sonia
  */
+
+//preference 1
+//on commence par recuperer les sites proches  
+$siteproches=array();
+
+for($i=0; $i<count($coordtab); $i++)
+{
+    for($j=0; $j<count($coordtab);$j++)
+    {
+        require_once '../google/carte.php';
+       if((getDistancePoints($coordtab[$i], $coordtab[$j])<= 1) &&($i<>$j))
+       {
+          // echo getDistancePoints($coordtab[$i], $coordtab[$j]).'<br />';
+           $temp=array();
+           $temp[]=($i+1);
+           $temp[]=($j+1);
+          
+       $siteproches[]=$temp;
+     
+           
+       }
+       
+    }
+}
+
+//var_dump($siteproches);
+var_dump($corp1);
+if($siteproches)
+{
+    foreach ($siteproches as $s) {
+        for($i=0; $i<count($coordtab);$i++)
+        {
+            if($i==($s[0]-1))//le premier siter
+            {
+                $corp1['a'][count($corp1)+($i+1)]['a'.(count($coordtab)+($i+1)) . ($i + 1)]=1;
+                $corp1['a'][count($corp1)+($i+1)]['a'.(count($coordtab)+($i+1)) . ($i + 1)]=-1;
+            }else{
+                $corp1['a'][count($corp1)+$i]['a'.(count($corp1)) . ($i + 1)]=0;
+            }
+        }          
+    }
+}
+var_dump($corp1);
 
 /*foreach ($tabPref as $key => $value) {
     for ($i = 0; $i < count($coordtab) - 1; $i++) {
@@ -93,6 +136,8 @@ $corp1['a'][count($coordtab)+1]['a'.(count($coordtab)) . (count($coordtab))]=1;
 /**
  * fin partie sonia
  */
+
+/*partie sans préférences*/
    $corp1['b'][0]['b1']=$budget;
    $corp1['b'][0]['b2']=$temps;
 for ($j = 0; $j < count($coordtab) - 1; $j++) {
@@ -107,7 +152,7 @@ for ($i = 0; $i < count($coordtab) - 1; $i++) {
     $corp1['c'][0]['c'.(($i + 1))]=1;
 }
 $corp1['c'][0]['c'.(count($coordtab))]=1;
-
+/*fin partie sans préférences ou on envoie C et B*/
 //var_dump($corp1);
 //echo json_encode($corp1);
 $r=new RestClient();
@@ -118,7 +163,7 @@ $pHeaders = array(
 $result=$r->setUrl('http://localhost/projetro/ro/resolution/solve/')->post($pHeaders, $body);
 
 $result=  json_decode($result['content'], true);
-print_r($result);
+//print_r($result);
 
 //on passe ensuite à l'ecriture des resultats
 
@@ -126,6 +171,14 @@ print_r($result);
 $resultF=array();
 $sommeTotal=0;
 $tempsTotal=0;
+/*
+ *  attributs d'un objet $value
+ * latitude
+ * longitude
+ * nom
+ * budget
+ * duree
+ */
 foreach($coordtab as $key=>$value)
 {
     if(in_array($key, $result['tabNumLieux']))
