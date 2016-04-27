@@ -1,0 +1,71 @@
+body{
+	background-color:#F1F1F1;
+}
+.carte{
+	height:700px;
+	background-color:blue;
+}
+.bloc_carte{
+	width: 70%;
+	background-color:green;
+	height:98%;
+	float:left;
+}
+.bloc_texte{
+	float:left;
+	width:30%;
+	background-color:yellow;
+	height:98%;
+	
+}
+div>a{
+	font-size: 1.5em;
+}
+.image{
+	
+	width: 100%;
+	height:100%;
+	background-color:white;
+}
+.image_photo{
+	width:80%;
+	height:90%;
+}
+
+#partner {
+  text-align: center;
+  margin-top:4%;
+}
+
+#partner h2, 
+#partner h3 {
+  color: grey;
+}
+.form-group{
+	text-align:left;
+}
+.boutons{
+	margin-top:50px;
+	margin-left:80px;
+}
+.valider{
+	background-color:green;
+}
+#preference_block{
+	display:none;
+}
+
+.body_resultat{
+	width: 60%;
+	background-color:white;
+	margin:auto;
+}
+.bloc_texte_resultat{
+	height: 200px;
+}
+
+.resultat_publier{
+	height:500px;
+	background-color: red;
+	padding-bottom:50px;
+}
