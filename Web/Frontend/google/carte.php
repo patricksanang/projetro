@@ -6,9 +6,16 @@
  */
 function getCarteMarqueurs($gmap)
 {
-    require_once 'controleur/requetes.php';
-    $coordtab=  getSites('RestClient.php');
-    //print_r($coordtab);
+    require_once 'RestClient.php';
+    $r=new RestClient();
+    $pHeaders = array(
+        'Content-Type: application/json'
+            );
+    $result=$r->setUrl('http://localhost/projetro/ro/donnees/getDonnees/')->get($pHeaders);
+    
+    $coordtab [] = array();
+    $coordtab=json_decode($result['content']);
+    //var_dump($coordtab);
     $comp=0;
     foreach($coordtab as $c)
     {

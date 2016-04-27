@@ -16,5 +16,6 @@ $forme[] = 'duree';
 $result = $fichier->traiteFichier(__DIR__.'/../Files/donnees.csv', $forme);
         
 $result=json_encode($result);
+//var_dump($result);
 
 echo $result;
