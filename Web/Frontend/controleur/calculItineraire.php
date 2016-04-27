@@ -29,7 +29,7 @@ if (!$preference) {
             $tabPref[substr($key, 1, 1)][] = substr($key, 2, 1);
         }
     }
-    //var_dump($tabPref);
+    var_dump($tabPref);
     //echo 'on recupere les preferences';
 }
 
@@ -79,16 +79,20 @@ for ($j = 0; $j < count($coordtab) - 1; $j++) {
 $corp1['a'][count($coordtab)+1]['a'.(count($coordtab)) . (count($coordtab))]=1;
 
 //etablissement des equations des preferences
+
+/*
+ * partie sonia
+ */
+
 /*foreach ($tabPref as $key => $value) {
     for ($i = 0; $i < count($coordtab) - 1; $i++) {
         $corp.='
             "a2' . ($i + 1) . '" : "' . $coordtab[$i]->duree . '",';
     }
 }*/
-
-//var_dump($corp1);
-//gestion du b
-
+/**
+ * fin partie sonia
+ */
    $corp1['b'][0]['b1']=$budget;
    $corp1['b'][0]['b2']=$temps;
 for ($j = 0; $j < count($coordtab) - 1; $j++) {
@@ -136,7 +140,7 @@ foreach($coordtab as $key=>$value)
 $_SESSION['resultF']=$resultF;
 $_SESSION['sommeF']=$sommeTotal;
 $_SESSION['tempsF']=$tempsTotal;
-header('Location:../page_resultats.php');
+//header('Location:../page_resultats.php');
 //var_dump($resultF);
 
 //require_once '../page_resultats.php';
