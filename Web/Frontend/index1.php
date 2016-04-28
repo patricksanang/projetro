@@ -30,10 +30,10 @@
             include_once("options.php");
             ?>
         </section>
-        <script src="ajax/envoi.js"></script>
-        <script src="js/preference.js"></script>
         <script src="js/jquery-1.7.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/preference.js"></script>
+        <script src="ajax/envoi.js"></script>
     </body>
 
 </html>

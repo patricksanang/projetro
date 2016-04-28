@@ -21,7 +21,7 @@
                     $comp = 1;
                     foreach ($coordtab as $coord):
                         ?>
-                        <tr onclick="choisi_site()">
+                        <tr>
                             <td><?= $coord->nom; ?></td>
                             <td><input type="checkbox" name="P3<?= $comp; ?>" id="P3<?= $comp; ?>"></td>				
                         </tr>

@@ -18,6 +18,7 @@ $(document).ready(function() {
                 success: function(valeurRetour) { // Je récupère la réponse du fichier PHP
 					if(valeurRetour=='1')
 						document.location.replace('');
+                    
 					else
 						alert('Echec de l operation ');
 
