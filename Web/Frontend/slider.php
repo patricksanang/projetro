@@ -1,22 +1,25 @@
- <div class="row col-sm-12 containStat">
-        <div id="carousel-slider" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators visible-xs">
-                    <li data-target="#carousel-slider" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-slider" data-slide-to="1"></li>
-                    <li data-target="#carousel-slider" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner col-sm-12 image">
-                    <div class="item active">
-                        <a href="#"> <img src="images/image1.png" class="img-responsive col-sm-12 image_photo" alt="Site 1"> Le site 1 </a>
-                   </div>
-				   <div class="item">
-                        <a href="#"><img src="images/image2.jpg" class="img-responsive col-sm-12 image_photo" alt="Site 2"> Le site 2</a>
-                   </div>
-				   <div class="item">
-                        <a href="#"><img src="images/image3.jpg" class="img-responsive col-sm-12 image_photo" alt="Site 3"> Le site 3</a>
-                   </div>
-				</div>
-        </div> <!--/#carousel-slider-->
-</div>
-   
+<div class="container">
+		<div class="c_slider"></div>
+		<div class="slider">
+			<figure>
+				<img src="img/b1.jpg" alt="" width="640" height="310" />
+				<figcaption>The mirror of soul</figcaption>
+
+			</figure><!--
+			--><figure>
+				<img src="img/b2.jpg" alt="" width="640" height="310" />
+				<figcaption>Let's cross that bridge when we come to it</figcaption>
+			</figure><!--
+			--><figure>
+				<img src="img/b3.jpg" alt="" width="640" height="310" />
+				<figcaption>Sushi<em>(do)</em> time</figcaption>
+
+			</figure><!--
+			--><figure>
+				<img src="img/b4.jpg" alt="" width="640" height="310" />
+				<figcaption>Waking Life</figcaption>
+			</figure>
+		</div>
+	</div>
+		
+	<span id="timeline"></span>

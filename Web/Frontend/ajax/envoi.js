@@ -1,6 +1,6 @@
-$(document).ready(function() {
+/*$(document).ready(function() {
     $('#preference_form').on('submit', function(e) {
-        e.preventDefault(); // J'empêche le comportement par défaut du navigateur, c-à-d de soumettre le formulaire
+        e.preventDefault(); // J'empï¿½che le comportement par dï¿½faut du navigateur, c-ï¿½-d de soumettre le formulaire
 		alert('tototo');
         var $this = $(this); // L'objet jQuery du formulaire
 		var budget = $('#budget').val();
@@ -9,13 +9,13 @@ $(document).ready(function() {
 		if(!(budget!='' && temps!='')) {
             alert('Le champ matricule est obligatoire');
         } else {
-            // Envoi de la requête HTTP en mode asynchrone
+            // Envoi de la requï¿½te HTTP en mode asynchrone
 			alert('Nous entrons bien');
             $.ajax({
                 url: 'controleur/tonFichierICI.php?type=connexion',
-                type: 'POST', // La méthode indiquée dans le formulaire (get ou post)
-                data: $this.serialize(), // Je sérialise les données (j'envoie toutes les valeurs présentes dans le formulaire)
-                success: function(valeurRetour) { // Je récupère la réponse du fichier PHP
+                type: 'POST', // La mï¿½thode indiquï¿½e dans le formulaire (get ou post)
+                data: $this.serialize(), // Je sï¿½rialise les donnï¿½es (j'envoie toutes les valeurs prï¿½sentes dans le formulaire)
+                success: function(valeurRetour) { // Je rï¿½cupï¿½re la rï¿½ponse du fichier PHP
 					if(valeurRetour=='1')
 						document.location.replace('');
 					else
@@ -25,4 +25,4 @@ $(document).ready(function() {
             });
         }
     });
-});
+});*/

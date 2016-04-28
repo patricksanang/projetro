@@ -36,8 +36,16 @@ $pHeaders = array(
             );
 $result=$r->setUrl('http://localhost/projetro/ro/resolution/solve/')->post($pHeaders, $body);
 
-print_r($result['content']);
+//print_r($result['content']);
 
 $result=$r->setUrl('http://localhost/projetro/ro/donnees/getDonnees/')->get($pHeaders);
 
-print_r($result['content']);
+//print_r($result['content']);
+?>
+ <div class="bloc_carte" id="map" onClick="document.getElementById('lat').value = getCurrentLat();
+                    document.getElementById('lng').value = getCurrentLng();">
+                     <?php
+                     require_once 'google/carte.php';
+                     carte(2, 'test1', 'Yaoundé', '1020px', '600px', 20, 'fr', array());
+                     ?>
+                </div>

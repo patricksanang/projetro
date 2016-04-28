@@ -13,6 +13,7 @@ $forme[] = 'longitude';
 $forme[] = 'nom';
 $forme[] = 'budget';
 $forme[] = 'duree';
+$forme[] = 'type';
 $result = $fichier->traiteFichier(__DIR__.'/../Files/donnees.csv', $forme);
         
 $result=json_encode($result);

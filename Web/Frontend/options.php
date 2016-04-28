@@ -31,8 +31,8 @@
                     </div>
                 </div>
             </div>
-
-            <div class="panel panel-primary" id="preference_block">
+            
+            <div class="panel panel-primary" id="preference_block2">
                 <div class="panel-heading">Choix des preferences</div>
                 <div class="panel-body">
                     <div class="col-sm-5 col-sm-offset-1">

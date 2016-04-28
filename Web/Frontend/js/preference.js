@@ -3,9 +3,10 @@ function active_preference(){
 	var temps = $('#temps').val();
 	if(budget!='' && temps!='')
 		{
-			alert("Disons bonjours");
+			//alert("Disons bonjours");
 			//$("preference_block").style="display:block;";
-			document.getElementById("preference_block").style="display:block;";
+			//document.getElementById("preference_block1").style="display:block;";
+                        document.getElementById("preference_block2").style="display:block;";
 			
 		}
 	else

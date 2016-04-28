@@ -51,7 +51,7 @@ if (!$preference) {
             $tabPref[substr($key, 1, 1)][] = substr($key, 2);
         }
     }
-  //  var_dump($tabPref);
+    var_dump($tabPref);
     //echo 'on recupere les preferences';
 }
 

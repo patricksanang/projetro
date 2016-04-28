@@ -80,14 +80,14 @@ $gmap->setDefaultHideMarker(false);
     {
         case 1:
             //on veut juste afficher la carte
-            //$gmap->generate();
-            //echo $gmap->getGoogleMap();
+            $gmap->generate();
+            echo $gmap->getGoogleMap();
             break;
         case 2:
             //on veut afficher la carte avec les marqueurs
-            //$gmap=getCarteMarqueurs($gmap);
-            //$gmap->generate();
-           // echo $gmap->getGoogleMap();
+            $gmap=getCarteMarqueurs($gmap);
+            $gmap->generate();
+            echo $gmap->getGoogleMap();
             break;
         case 3:
             //on veut afficher la carte avec l'itineraire
