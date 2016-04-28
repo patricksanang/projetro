@@ -5,7 +5,7 @@ function active_preference(){
 		{
 			//alert("Disons bonjours");
 			//$("preference_block").style="display:block;";
-			//document.getElementById("preference_block1").style="display:block;";
+			document.getElementById("preference_block1").style="display:block;";
                         document.getElementById("preference_block2").style="display:block;";
 			
 		}
@@ -30,3 +30,20 @@ function DecocheTout(ref) {
 		}
 	}
 }
+
+$("#modal_block1, #modal_block2, #modal_block3, #modal_block4, #modal_block5").each(function(){
+	var self = $(this);
+	self.find("input:checkbox").change(function () {
+		console.log("yoipi");
+		var n = self.find("input:checkbox:checked").length;
+		if( n == 2){
+			self.find("input:checkbox:not(:checked)").attr("disabled", true);//prop("disable", true );
+			$('.modal_footer').append("<div class='alert alert-warning'><strong>Warning!</strong></div> ");
+
+		}
+		else if( n < 2){
+			self.find("input:checkbox").attr("disabled", false);//.prop("disable", false );
+		}
+		
+	});
+});

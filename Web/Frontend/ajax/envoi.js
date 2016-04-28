@@ -18,6 +18,7 @@
                 success: function(valeurRetour) { // Je r�cup�re la r�ponse du fichier PHP
 					if(valeurRetour=='1')
 						document.location.replace('');
+                    
 					else
 						alert('Echec de l operation ');
 

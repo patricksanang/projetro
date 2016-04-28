@@ -31,6 +31,32 @@
                     </div>
                 </div>
             </div>
+            <div class="panel panel-primary" id="preference_block1">
+                <div class="panel-heading">Choix des preferences 1</div>
+                <div class="panel-body">
+                    Choisir parmi les: 
+                    <div class="col-sm-5 col-sm-offset-1">
+                        <div class="form-group">
+                            <input type="checkbox" name="R1" />
+                            <label>Restaurants</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="R2"  />
+                            <label>Parcs</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <input type="checkbox" name="R3"   />
+                            <label>Monuments</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="R4"   />
+                            <label>Musées</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
             <div class="panel panel-primary" id="preference_block2">
                 <div class="panel-heading">Choix des preferences</div>

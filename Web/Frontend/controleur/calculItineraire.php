@@ -40,6 +40,30 @@ if($monnaie!='XAF')
 //recuperation de avec ou sans preference
 $preference = ($_POST['submit'] != 'sans');
 
+$type=array();
+foreach ($_POST as $key => $value) {
+        if (substr($key, 0, 1) == 'R') {
+            //ce sont les preferences
+            //echo 'ok';
+            switch(substr($key, 1, 1))
+            {
+                case 1: 
+                    $type[]='RESTAURANT';
+                    break;
+                case 2:
+                    $type[]='PARC';
+                    break;
+                case 3:
+                    $type[]='MONUMENT';
+                    break;
+                case 4:
+                    $type[]='MUSEE';
+                    break;
+            }
+        }
+    }
+    
+    var_dump($type);
 $tabPref = array();
 if (!$preference) {
     //echo 'on continue sans preference';
@@ -59,6 +83,19 @@ if (!$preference) {
 //debut de l'etablissement des equations lineaires
 //on recupere la liste des sites
 $coordtab = getSites('../RestClient.php');
+
+//var_dump($coordtab);
+$tempCoord=array();
+foreach($coordtab as $key=>$coord)
+{
+    if(in_array($coord->type, $type))
+    {
+        //array_splice($coordtab, $key);
+        $tempsCoord[]=$coord;
+    }
+}
+$coordtab=array();
+$coordtab=$tempsCoord;
 
 //etablissement de l'equation du budget
 $corp1 = array();

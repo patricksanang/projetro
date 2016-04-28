@@ -58,7 +58,6 @@
             include_once("options.php");
             ?>
         </section>
-
         <!-- jQuery Version 1.11.0 -->
         <script src="js/jquery-1.11.0.js"></script>
 
@@ -98,9 +97,9 @@
         </script>
 
         <script src="ajax/envoi.js"></script>
-        <script src="js/preference.js"></script>
         <script src="js/jquery-1.7.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
+        <script src="js/preference.js"></script>
     </body>
 
 </html>
