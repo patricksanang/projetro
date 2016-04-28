@@ -64,14 +64,14 @@ foreach($tab['b'] as $k=>$val)
 $tab['lge'] = $lge;
 $tab['intera'] = true;
 
-var_dump($tab);
+//var_dump($tab);
 require 'Simplexe/simplesso.php';
 
 
-var_dump($result);
+//var_dump($result);
 
 $tabResult = explode(';', $result);
-echo $result;
+//echo $result;
 //$resultFinal=json_encode($tabResult);
 $comp=0;
 $nombreLieux=0;

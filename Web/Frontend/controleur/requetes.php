@@ -24,4 +24,21 @@ function getSites($file)
     
     return $coordtab;
 }
+/**
+ * fonction pour recuperer la monnaie
+ */
+function convertisseur_monnaie($montant,$de,$a, $file){
+    
+    $mc = "http://www.convertisseur-euros.com/api.php?d1=".$de."&d2=".$a."&x=".$montant."&t=json";
+    $mjson = file_get_contents($mc);
+    $result = json_decode($mjson, TRUE);
+    $mok = $result['success'];
+    if($mok)
+        return round($result['rate']*$montant, 0);
+    else
+        return "Erreur";//$coordtab [] = array();
+    //$coordtab=json_decode($result['content']);
+    
+    
+}
 

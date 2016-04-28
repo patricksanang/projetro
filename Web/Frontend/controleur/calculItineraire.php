@@ -1,6 +1,8 @@
 <?php
 
 session_start();
+require_once 'requetes.php';
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,12 +17,32 @@ $budget = $_POST['budget'];
 //recuperation du temps
 $temps = $_POST['temps'];
 
+//monnaie
+$monnaie=$_POST['monnaie'];
+
+//echo $monnaie.'<br>';
+//on convertit la monnaie en frscfa
+//echo $budget.'<br>';
+$budgetAn=$budget;
+if($monnaie!='XAF')
+{
+    $budgetCon=convertisseur_monnaie($budget, $monnaie,'XAF', '../RestClient.php');
+    if($budgetCon=='Erreur')
+    {
+        $_SESSION['erreurF']="Ooops, une erreur est survenue!";
+        header('Location:../page_resultats.php');
+    }  else {
+        $budget=$budgetCon;
+        
+    }
+}
+//echo $budget.'<br>';
 //recuperation de avec ou sans preference
 $preference = ($_POST['submit'] != 'sans');
 
 $tabPref = array();
 if (!$preference) {
-    echo 'on continue sans preference';
+    //echo 'on continue sans preference';
 } else {
     foreach ($_POST as $key => $value) {
         if (substr($key, 0, 1) == 'P') {
@@ -29,14 +51,13 @@ if (!$preference) {
             $tabPref[substr($key, 1, 1)][] = substr($key, 2);
         }
     }
-    var_dump($tabPref);
+  //  var_dump($tabPref);
     //echo 'on recupere les preferences';
 }
 
 //fin des recuperations
 //debut de l'etablissement des equations lineaires
 //on recupere la liste des sites
-require_once 'requetes.php';
 $coordtab = getSites('../RestClient.php');
 
 //etablissement de l'equation du budget
@@ -128,7 +149,7 @@ $comp=1;
 //$comp1=1;
 if ($siteproches) {
     $m=count($siteproches)+1;
-    echo $m.' taille de sitesproches';
+  //  echo $m.' taille de sitesproches';
     foreach ($siteproches as $s) {
         for ($i = 1; $i <= count($coordtab); $i++) {
             //echo $s[0];
@@ -172,7 +193,7 @@ if ($siteproches) {
 //var_dump($corp1);
 $t=count($corp1['b'][0])+1;
 
-echo $t;
+//echo $t;
 for ($j = $t; $j <$t+2*($m-1); $j++) {
     $corp1['b'][0]['b' . ($j)] = 0;
 }
@@ -217,7 +238,7 @@ if(isset($tabPref[4]))
     }*/
     $t=count($corp1['b'][0])+1;
 
-    echo $t;
+  //  echo $t;
     for ($j = $t; $j <$t+$m; $j++) {
         $corp1['b'][0]['b' . ($j)] = -1;
     }
@@ -300,8 +321,8 @@ if(isset($tabPref[5]))
         $corp1['b'][0]['b' . ($t+2)] = 0;
 }
 
-var_dump($corp1['a']);
-var_dump($corp1['b']);
+//var_dump($corp1['a']);
+//var_dump($corp1['b']);
 
 /* foreach ($tabPref as $key => $value) {
   for ($i = 0; $i < count($coordtab) - 1; $i++) {
@@ -313,7 +334,7 @@ var_dump($corp1['b']);
 /**
  * fin partie sonia
  */
-//var_dump($corp1);
+var_dump($corp1);
 //echo json_encode($corp1);
 $r = new RestClient();
 $body = array(json_encode($corp1));
@@ -337,7 +358,8 @@ $tempsTotal = 0;
  * budget
  * duree
  */
-if($result['tabNumLieux'])
+
+if(isset($result['tabNumLieux']))
 {
 foreach ($coordtab as $key => $value) {
     if (in_array($key, $result['tabNumLieux'])) {
@@ -346,18 +368,19 @@ foreach ($coordtab as $key => $value) {
         $tempsTotal+=$value->duree;
     }
 }
-    var_dump($result);
+//    var_dump($result);
 
 $_SESSION['resultF'] = $resultF;
 $_SESSION['sommeF'] = $sommeTotal;
 $_SESSION['tempsF'] = $tempsTotal;
-    
+ //header('Location:../page_resultats.php');  
 }  else {
-
-    $_SESSION['erreurF'] = 'Oops, une erreur s\'est produite...';
-    
+    $_SESSION['erreurF'] = 'Desolé, nous n\'avons pas pu trouver de sites...';
+    //header('Location:../page_resultats.php');
 }
-header('Location:../page_resultats.php');
+
+//var_dump($_SESSION);
+//
 //var_dump($resultF);
 
 //require_once '../page_resultats.php';

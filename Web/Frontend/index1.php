@@ -8,7 +8,7 @@
         <link href="css/style.css" rel="stylesheet" type="text/css" media="screen"/>
     </head>
 
-    <body>
+    <body onload="DecocheTout(this)">
         <?php include_once("header.php"); ?>
         <section class="carte">
             <div class="bloc_carte" id="map" onClick="document.getElementById('lat').value = getCurrentLat();
