@@ -276,15 +276,11 @@ class matrix {
 	}
 	public function soluzioni_ottime($verticeA, $verticeB) {
 		$content='';
-		$content.= $verticeA[0]->fractoa().':;';
-		
-		for ($j = 1; $j < $this->col - 1; $j++) $content.= $verticeA[$j]->fractoa().';';
-		
-		//$content.= sprintf("%s ]<sup>T</sup> + (1-&lambda;) [ ", $verticeB[0]->fractoa());
-		/*for ($j = 1; $j < $this->col - 1; $j++) $content.= $verticeB[$j]->fractoa().';';
+		$content.= sprintf("%s", $verticeA[0]->fractoa()).':;';
+		for ($j = 1; $j < $this->col - 1; $j++) $content.= sprintf("%s;", $verticeA[$j]->fractoa()); $content.= $verticeA[$j]->fractoa().';';
+		$content.= sprintf("%s", $verticeB[0]->fractoa());
+		for ($j = 1; $j < $this->col - 1; $j++) $content.= $verticeB[$j]->fractoa().';';
 		$content.= $verticeB[$j]->fractoa().';';
-		$content.= "</font><br>\n";*/
-		//$content=';'.$verticeA[0]->fractoa().';'.$verticeB[0]->fractoa().';';
 		return $content;
 	}
 	/*

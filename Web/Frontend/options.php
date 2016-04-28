@@ -38,12 +38,7 @@
                         </p>
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="P2"  data-toggle="modal" data-target="#modal_block"/>
-                        <label>preference 2</label>
-                        <p>  Il souhaite visiter à tout prix la Tour Eiffel et un musée</p>
-                    </div>
-                    <div class="form-group">
-                        <input type="checkbox" name="P3" />
+                        <input type="checkbox" name="P3" data-toggle="modal" data-target="#modal_block3" />
                         <label>preference 3</label>
                         <p>S’il visite la cathédrale Notre Dame alors il ne visitera pas la Sainte Chapelle</p>
 
@@ -56,7 +51,7 @@
                         <p> Il souhaite visiter à tout prix la Tour Montparnasse</p>
                     </div>
                     <div class="form-group">
-                        <input type="checkbox" name="P5" />
+                        <input type="checkbox" name="P5"  data-toggle="modal" data-target="#modal_block5" />
                         <label>preference 5</label>
                         <p> S’il visite le musée du Louvre alors il doit visiter le Centre pompidou</p>
                     </div>
@@ -67,6 +62,8 @@
             </div>
             <?php include_once("modal2.php"); ?>
             <?php include_once("modal3.php"); ?>
+            <?php include_once("modal4.php"); ?>
+            <?php include_once("modal5.php"); ?>
             </form>
 
         </div>	

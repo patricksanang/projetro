@@ -27,8 +27,13 @@
                     <div class="resultat_publier">
                         Pour un budget de <?= $_SESSION['sommeF'] ?> pendant <?= $_SESSION['tempsF'] ?> Heures, vous pouvez visiter:
                         <?php
+                        $comp2=65;
                         foreach ($_SESSION['resultF'] as $r)
-                            echo '<br>' . $r->nom . '<br>';
+                        {
+                            echo '<br>'.chr($comp2).' - '. $r->nom . '<br>';
+                            $comp2++;
+                        }
+                            
                         ?>
 
                     </div>
