@@ -1,0 +1,123 @@
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.bloc1{
+	width:100%;
+	//height:400px;
+	background-color: blue;
+	//margin-top:50px;
+	height:720px;
+	text-align: center;
+}
+
+#top{
+	
+	width:55%;
+	margin: auto;
+	margin-top:-350px;
+	margin-left:700px;
+}
+
+.bloc1{
+	background : url('../img/entete4.jpg');
+}
+
+.msg_accueil{
+font-size: 2.4rem;
+font-family: "Montserrat", Arial, sans-serif;
+font-weight: 700;
+color: #fff;
+font-size: 1.1rem;
+text-shadow: 3px 4px 3px rgba(0,0,0,0.25);
+font-size: 5em;
+}
+.msg_accueil1{
+font-size: 2.4rem;
+font-family: "Montserrat", Arial, sans-serif;
+font-weight: 700;
+color: #fff;
+font-size: 1.1rem;
+text-shadow: 3px 4px 3px rgba(0,0,0,0.25);
+font-size: 2em;
+}
+
+.btn-primary1 {
+    border-color: #65ACD6;
+    background-color: #65ACD6;
+	text-transform: uppercase;
+	font-weight: 300;
+	color: #fff;
+}
+.btn1 {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.msg1{
+	padding-top:100px;
+}
+
+.msg2{
+	padding-top:50px;
+}
+
+.bloc_action{
+	margin-top:75px;
+}
+
+.budget2{
+	margin-top:15px;
+}
+.boutons{
+	padding-top:15px;
+}
+.zone_carte{
+	width:80%;
+	height:600px;
+	margin:auto;
+	background: black;
+}
+.textecarte{
+	color:white;
+}
+.menur{
+	width:70%;
+	margin:auto;
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.2) inset;
+}
+.zone_carte_r{
+	width:90%;
+	height:600px;
+	margin:auto;
+	background: black;
+	margin-bottom:50px;
+}
+.zone_ecriture{
+	width:90%;
+	height:400px;
+	margin:auto;
+	background: black;
+	margin-top:10px;
+	
+}
+.animated3{
+	margin-left:250px;
+}

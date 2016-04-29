@@ -1,25 +1,9 @@
-    <!-- Navigation -->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
-                <a href="#top">Start Bootstrap</a>
-            </li>
-            <li>
-                <a href="#top">Home</a>
-            </li>
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#services">Services</a>
-            </li>
-            <li>
-                <a href="#portfolio">Portfolio</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </nav>
+<section class="bloc1">
+	<div class="msg1">
+		<h1 class="msg_accueil">Bienvenue a Yaounde</h1>
+		<h3 class="msg_accueil1"> Baladez vous dans la ville en fonction de votre budget... et de votre temps...</h3>
+	</div>
+	<div class="msg2">
+		<a class="btn btn-primary btn1 btn-primary1 animated3" href="#option"> Allez-y maintenant</a>
+	</div>
+</section>

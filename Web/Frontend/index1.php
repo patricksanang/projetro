@@ -9,13 +9,13 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Stylish Portfolio - Start Bootstrap Theme</title>
+        <title>Site touristique de Yaounde</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="screen"/>
         <link href="css/style.css" rel="stylesheet" type="text/css" media="screen"/>
-
+		<link href="css/style_moi.css" rel="stylesheet" type="text/css" media="screen"/>
         <!-- Custom CSS -->
         <link href="css/stylish-portfolio.css" rel="stylesheet">
 
@@ -34,26 +34,20 @@
 
     <body>
 
-        <?php include_once("header.php"); ?>
+        <?php include_once("header.php"); ?> 
 
         <!-- Header -->
-        <header id="top" class="header">
+        <div id="top">
 
-            <div class="text-vertical-center">
-                <h1>Bienvenue à Yaoundé</h1>
-                <h3>Baladez vous dans la ville en fonction de votre budget... et de votre temps...</h3>
-
-                <br>
-                <a href="#partner" class="btn btn-dark btn-lg">Commencer la balade...</a>
-            </div>
+            <!-- il y avait le text ici-->
             <div id="slideshow" class="text-vertical-center">
                 <?php
                 include_once("slider.php");
                 ?>
             </div>
 
-        </header>
-        <section>
+        </div>
+        <section class="bloc_action">
             <?php
             include_once("options.php");
             ?>

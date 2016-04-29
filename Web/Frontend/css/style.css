@@ -43,8 +43,8 @@
 #banniere img{
     width: 250px;
     height: 150px;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    /*margin-top: 1%;*/
+   
 }
 #banniere ul{
     overflow: hidden;
@@ -82,9 +82,14 @@
 }
 
 #slideshow {
-	/*position: relative;
-	width: 800px;
-	height: 400px;
+	
+	//width: 60%;
+	//height: 400px;
+	background-color: white;
+	margin-right:70px;
+	box-shadow: 1px 1px 12px #555 inset;
+	/*
+	position: relative;
 	padding: 15px;
 	margin: 0 auto 2em;
 	border: 1px solid #ddd;
@@ -146,6 +151,7 @@
 	left:0; top:0;
 	width: 400%;
 	height: 310px;
+	
 }
 
 /* annulation des marges sur figure */

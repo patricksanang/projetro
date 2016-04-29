@@ -1,7 +1,7 @@
 <section id="partner">
     <div class="container">
         <div class="center wow fadeInDown">
-            <h2>Choix d'un itineraire</h2>
+            <h2 id="option">Choix d'un itineraire</h2>
         </div>    
         <form  id="preference_form" method="post" action='controleur/calculItineraire.php' name="preference-form" style="display:block;" >
             <div class="panel panel-primary">
@@ -11,12 +11,7 @@
                         <div class="form-group">
                             <label>Votre budget</label>
                             <input onload="DecocheTout(this)" type="number" name="budget" id="budget" class="form-control" required="required">
-                            <select name="monnaie" id="monnaie" class="form-control">
-                                <option value="XAF"> XAF </option>
-                                <option value="USD"> USD </option>
-                                <option value="EUR"> EUR </option>
-                                
-                            </select>
+                           
                         </div>
                         <div class="form-group">
                             <label>Le temps dont vous disposez(en Heures)</label>
@@ -24,7 +19,15 @@
                         </div>
                     </div>
                     <div class="col-sm-5 boutons">
-                        <div class="form-group gconfirm center">
+						<div class="budget2">	
+							<select name="monnaie" id="monnaie" class="form-control">
+                                <option value="XAF"> XAF </option>
+                                <option value="USD"> USD </option>
+                                <option value="EUR"> EUR </option>
+                                
+                            </select>
+						</div>
+                        <div class="form-group gconfirm center boutons">
                             <button type="button" name="submit" class="btn btn-primary btn-lg" onclick="active_preference()" >Choisir des preferences</button>
                             <button type="submit" name="submit" value="sans" class="btn btn-primary btn-lg valider" >Valider</button>
                         </div>
@@ -97,7 +100,9 @@
                 <?php include_once("modal4.php"); ?>
                 <?php include_once("modal5.php"); ?>
         </form>
-
+		<div class="zone_carte">
+			<p class="textecarte">ISERTION DE LA CARTE ICI</p>
+		</div>
     </div>	
 </div><!--/.container-->
 </section><!--/#partner-->
