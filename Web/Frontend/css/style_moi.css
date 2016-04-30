@@ -27,18 +27,18 @@ h1, h2, h3, h4, h5, h6 {
 font-size: 2.4rem;
 font-family: "Montserrat", Arial, sans-serif;
 font-weight: 700;
-color: #fff;
+color: rgba(255,255,255,1);
 font-size: 1.1rem;
-text-shadow: 3px 4px 3px rgba(0,0,0,0.25);
+text-shadow: 3px 4px 3px rgba(0,0,0,0.75);
 font-size: 5em;
 }
 .msg_accueil1{
 font-size: 2.4rem;
 font-family: "Montserrat", Arial, sans-serif;
 font-weight: 700;
-color: #fff;
+color: rgba(255,255,255,1);
 font-size: 1.1rem;
-text-shadow: 3px 4px 3px rgba(0,0,0,0.25);
+text-shadow: 3px 4px 3px rgba(0,0,0,0.55);
 font-size: 2em;
 }
 
@@ -84,10 +84,11 @@ font-size: 2em;
 }
 
 .budget2{
-	margin-top:15px;
+	margin-top:25px;
 }
 .boutons{
-	padding-top:15px;
+	padding-top:150px;
+	margin-left:35%;
 }
 .zone_carte{
 	width:80%;

@@ -17,8 +17,9 @@
                             <label>Le temps dont vous disposez(en Heures)</label>
                             <input type="number" name="temps" id="temps" class="form-control" required="required">
                         </div>
+						
                     </div>
-                    <div class="col-sm-5 boutons">
+                    <div class="col-sm-5">
 						<div class="budget2">	
 							<select name="monnaie" id="monnaie" class="form-control">
                                 <option value="XAF"> XAF </option>
@@ -27,15 +28,16 @@
                                 
                             </select>
 						</div>
-                        <div class="form-group gconfirm center boutons">
-                            <button type="button" name="submit" class="btn btn-primary btn-lg" onclick="active_preference()" >Choisir des preferences</button>
+                        
+                    </div>
+					<div class="form-group gconfirm center boutons">
+                            <button type="button" name="submit" class="btn btn-primary btn-lg" onclick="active_preference()" href="aller_preferences">Choisir des preferences</button>
                             <button type="submit" name="submit" value="sans" class="btn btn-primary btn-lg valider" >Valider</button>
-                        </div>
                     </div>
                 </div>
             </div>
             <div class="panel panel-primary" id="preference_block1">
-                <div class="panel-heading">Choix des preferences 1</div>
+                <div class="panel-heading" id="aller_preferences">Choix des preferences 1</div>
                 <div class="panel-body">
                     Choisir parmi les: 
                     <div class="col-sm-5 col-sm-offset-1">
